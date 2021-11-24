@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">User Register in the utest page</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="30216fef0a0a5f957f997dd18c2a4bdee49ea085d57478c2e6014c88d7d2a53f.html">Registro De Usuario En Tienda</a></span>
+                > <span class="truncate-60"><a
+                    href="bbc3aa9e9b9273f6c0987efcc5e0407e5811895e7ffd7f133a4f910dbe2c49cf.html">Registro de manuel en la pagina de Tienda </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-11-2021 17:26</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Registro De Usuario En Tienda </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="e0e727b5b6644c8f3cb483e99b843c02eb2334fec16c0b22bee3f4c672b65ca7.html">Scenario
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                    (context)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="8e3b9bd5eba0a2d944ce7d2a73335e57289cd25f71e556e1618e946dc87d7ec9.html">Stories
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon fa-2x' title='PENDING'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="pending-color">Registro de manuel en la pagina de Tienda
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="ac0ea618cba7c143f45b840b03748d3cf90e0b68a4e9b9663762b06c3e33f479.png" title=" Given manuel desea registrarse en la Tienda" width="1366"/>
+                <img src="ac0ea618cba7c143f45b840b03748d3cf90e0b68a4e9b9663762b06c3e33f479.png" title=" Manuel abrir" width="1366"/>
+                <img src="ac0ea618cba7c143f45b840b03748d3cf90e0b68a4e9b9663762b06c3e33f479.png" title=" Manuel opens the Pagina tienda" width="1366"/>
+                <img src="6bbee594fdb44b53de2f62025d815f25f0875cfd3f273810931b58c07650dbb3.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="f726e1a16541070a1b1c5d3f7ef1dc6ded0905893dcaf3be35120e06527f0d0c.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="f726e1a16541070a1b1c5d3f7ef1dc6ded0905893dcaf3be35120e06527f0d0c.png" title=" Manuel abrir (completed)" width="1366"/>
+                <img src="f726e1a16541070a1b1c5d3f7ef1dc6ded0905893dcaf3be35120e06527f0d0c.png" title=" Given manuel desea registrarse en la Tienda (completed)" width="1366"/>
+                <img src="16a6f781530ed7e4572fcd96a7392d559e9d048c2ecb64de64b13d2b6fbb7d40.png" title=" When el usuario ingresa los datos requeridos por el sistema
+| strCorreo | strAlias | strTelefono1 | strTelefono2 | strOther | strCountry | strEstado | strCodigoPostal | strCity | strNombre | strApelllido | strContrasena | strDia | strMes | strAno | strEmpresa | strDireccion1 | strDireccion2 |
+| a88Rf0KXns2@gmail.com | alias RICK | 3235308332 | 3104197185 | no hay onfo | United States | Alaska | 23001 | Monteria | ricard | narvaez | ricardo | 25 | octubre | 1996 | agrosol | calle 45# 56-78 | calle 67# 67-89 |" width="1366"/>
+                <img src="16a6f781530ed7e4572fcd96a7392d559e9d048c2ecb64de64b13d2b6fbb7d40.png" title=" Manuel l lenarcorreo" width="1366"/>
+                <img src="16a6f781530ed7e4572fcd96a7392d559e9d048c2ecb64de64b13d2b6fbb7d40.png" title=" Manuel enters 'a88Rf0KXns2@gmail.com' into correo" width="1366"/>
+                <img src="16a6f781530ed7e4572fcd96a7392d559e9d048c2ecb64de64b13d2b6fbb7d40.png" title=" Manuel clicks on boton registro 2" width="1366"/>
+                <img src="e2b2554124691b1ae4d3203e5ad743c584fa2b290b581dd6722bbd5f7ad43adc.png" title=" Manuel clicks on boton registro 2 (completed)" width="1366"/>
+                <img src="e2b2554124691b1ae4d3203e5ad743c584fa2b290b581dd6722bbd5f7ad43adc.png" title=" Manuel l lenarcorreo (completed)" width="1366"/>
+                <img src="e2b2554124691b1ae4d3203e5ad743c584fa2b290b581dd6722bbd5f7ad43adc.png" title=" Manuel l lenar formulario" width="1366"/>
+                <img src="36f8a7f21cffcba7e8a35acf8a4265d6412215d1186f6f8bcb83c187bcb5852c.png" title=" Manuel enters 'alias RICK' into alias" width="1366"/>
+                <img src="e09c673ce84d1d8a5148cedf1502487fbd4ae64e7dc4b865afb93bbab4e56250.png" title=" Manuel enters 'alias RICK' into alias (completed)" width="1366"/>
+                <img src="e09c673ce84d1d8a5148cedf1502487fbd4ae64e7dc4b865afb93bbab4e56250.png" title=" Manuel enters '3104197185' into " width="1366"/>
+                <img src="86c9ea59d47619f5e29b393d6cb37642a4f81593bcdcb3ef6dea4fccb4e141a4.png" title=" Manuel enters '3104197185' into  (completed)" width="1366"/>
+                <img src="86c9ea59d47619f5e29b393d6cb37642a4f81593bcdcb3ef6dea4fccb4e141a4.png" title=" Manuel enters '3235308332' into " width="1366"/>
+                <img src="5f6b71723f4f8aadfe5ed79dd8b260aa83e746f8c9971602f23fbf47ea6dc842.png" title=" Manuel enters '3235308332' into  (completed)" width="1366"/>
+                <img src="5f6b71723f4f8aadfe5ed79dd8b260aa83e746f8c9971602f23fbf47ea6dc842.png" title=" Manuel enters 'no hay onfo' into " width="1366"/>
+                <img src="34a0a0a859371b077d407d8aaec26f1eea2c137749bee0a5c9f6aa804efbfd77.png" title=" Manuel enters 'no hay onfo' into  (completed)" width="1366"/>
+                <img src="34a0a0a859371b077d407d8aaec26f1eea2c137749bee0a5c9f6aa804efbfd77.png" title=" Manuel clicks on " width="1366"/>
+                <img src="d17578d9b68834bd182862e5806f74bb923cb3211f62250a50de8ae2fe0a10f2.png" title=" Manuel clicks on  (completed)" width="1366"/>
+                <img src="d17578d9b68834bd182862e5806f74bb923cb3211f62250a50de8ae2fe0a10f2.png" title=" Manuel clicks on " width="1366"/>
+                <img src="c20b8e172a74652a5012bd1924882e59022ee3b8ea6fa9ebd4b9d36a73db4f16.png" title=" Manuel clicks on  (completed)" width="1366"/>
+                <img src="c20b8e172a74652a5012bd1924882e59022ee3b8ea6fa9ebd4b9d36a73db4f16.png" title=" Manuel select Alaska on " width="1366"/>
+                <img src="d7b6cb0413db1d597eff08aacb957e0f0827dd796c954ae9159144349e887920.png" title=" Manuel select Alaska on  (completed)" width="1366"/>
+                <img src="d7b6cb0413db1d597eff08aacb957e0f0827dd796c954ae9159144349e887920.png" title=" Manuel enters '23001' into " width="1366"/>
+                <img src="75fa2e2d33d97c9b6dbafff1b95563ec05ed6427833000751f24ee2c430f1629.png" title=" Manuel enters '23001' into  (completed)" width="1366"/>
+                <img src="75fa2e2d33d97c9b6dbafff1b95563ec05ed6427833000751f24ee2c430f1629.png" title=" Manuel enters 'Monteria' into city" width="1366"/>
+                <img src="05a8837542f3f2a8e908e7688ab4b1f0917ee65be131d398a9fa8f4d0bea3002.png" title=" Manuel enters 'Monteria' into city (completed)" width="1366"/>
+                <img src="05a8837542f3f2a8e908e7688ab4b1f0917ee65be131d398a9fa8f4d0bea3002.png" title=" Manuel clicks on " width="1366"/>
+                <img src="85666f2372158fb644296d53530a85fa77d40b86e6619fbe5f4ae5f8b8658d49.png" title=" Manuel clicks on  (completed)" width="1366"/>
+                <img src="85666f2372158fb644296d53530a85fa77d40b86e6619fbe5f4ae5f8b8658d49.png" title=" Manuel enters 'ricard' into " width="1366"/>
+                <img src="f1941e3ed9b65f2e9bc0a8623d99f9427506cfa9a3d837069299481d14aedcea.png" title=" Manuel enters 'ricard' into  (completed)" width="1366"/>
+                <img src="f1941e3ed9b65f2e9bc0a8623d99f9427506cfa9a3d837069299481d14aedcea.png" title=" Manuel enters 'narvaez' into " width="1366"/>
+                <img src="4f9addeee08e1de3fc4499e6d27cbc3e45b84b08c93f464b53cce2298b6cf421.png" title=" Manuel enters 'narvaez' into  (completed)" width="1366"/>
+                <img src="4f9addeee08e1de3fc4499e6d27cbc3e45b84b08c93f464b53cce2298b6cf421.png" title=" Manuel enters 'ricardo' into " width="1366"/>
+                <img src="7c66feee7429d67bc3600fb60ac2a674b906e8f0a01bef9a21dab73c9528c303.png" title=" Manuel enters 'ricardo' into  (completed)" width="1366"/>
+                <img src="7c66feee7429d67bc3600fb60ac2a674b906e8f0a01bef9a21dab73c9528c303.png" title=" Manuel clicks on " width="1366"/>
+                <img src="29371ac8ce989fff42d2d9aee5fa71c13b583a44340d5bc2ac31338799bd97a9.png" title=" Manuel clicks on  (completed)" width="1366"/>
+                <img src="29371ac8ce989fff42d2d9aee5fa71c13b583a44340d5bc2ac31338799bd97a9.png" title=" Manuel enters '25' into " width="1366"/>
+                <img src="396d503f3746c1bf12e7218e0063b03266bbbb02da99aa71917992ddc3673bef.png" title=" Manuel enters '25' into  (completed)" width="1366"/>
+                <img src="396d503f3746c1bf12e7218e0063b03266bbbb02da99aa71917992ddc3673bef.png" title=" Manuel clicks on " width="1366"/>
+                <img src="f264fb2eb2d9bf27e939bf9985e219df3c92ec9714cd33c35e05bf58690b966d.png" title=" Manuel clicks on  (completed)" width="1366"/>
+                <img src="f264fb2eb2d9bf27e939bf9985e219df3c92ec9714cd33c35e05bf58690b966d.png" title=" Manuel enters 'octubre' into " width="1366"/>
+                <img src="4afd9b61b94811d7c7a8331c2a9690f6c992c2dbb04dcc9eea579d3a75ce9b57.png" title=" Manuel enters 'octubre' into  (completed)" width="1366"/>
+                <img src="4afd9b61b94811d7c7a8331c2a9690f6c992c2dbb04dcc9eea579d3a75ce9b57.png" title=" Manuel clicks on " width="1366"/>
+                <img src="c676e6f7e11f9f0e37cdd32c4ce0997b1ff8d0f566dc21551f6a92f0f43053ca.png" title=" Manuel clicks on  (completed)" width="1366"/>
+                <img src="c676e6f7e11f9f0e37cdd32c4ce0997b1ff8d0f566dc21551f6a92f0f43053ca.png" title=" Manuel enters '1996' into " width="1366"/>
+                <img src="ca61ac62066443337ed5e50170f9408011927684707398352add5d942c318630.png" title=" Manuel enters '1996' into  (completed)" width="1366"/>
+                <img src="ca61ac62066443337ed5e50170f9408011927684707398352add5d942c318630.png" title=" Manuel enters 'agrosol' into " width="1366"/>
+                <img src="fa11d2ed6bcf6b6a3a90f8f1dd9c1322b82044f8e60e94eb02823dea89e65a4b.png" title=" Manuel enters 'agrosol' into  (completed)" width="1366"/>
+                <img src="fa11d2ed6bcf6b6a3a90f8f1dd9c1322b82044f8e60e94eb02823dea89e65a4b.png" title=" Manuel enters 'calle 45# 56-78' into " width="1366"/>
+                <img src="12489c841c58880c77cac4cdc3cb5b3780d6df647d2d8a9fe487d5e4854fa538.png" title=" Manuel enters 'calle 45# 56-78' into  (completed)" width="1366"/>
+                <img src="12489c841c58880c77cac4cdc3cb5b3780d6df647d2d8a9fe487d5e4854fa538.png" title=" Manuel enters 'calle 67# 67-89' into " width="1366"/>
+                <img src="e06aa06d60ff8fc0b4c79eb7dd8ad809b60b48e4098176fdd46ab7a8cb3563e2.png" title=" Manuel enters 'calle 67# 67-89' into  (completed)" width="1366"/>
+                <img src="e06aa06d60ff8fc0b4c79eb7dd8ad809b60b48e4098176fdd46ab7a8cb3563e2.png" title=" Manuel clicks on " width="1366"/>
+                <img src="b009739e06fa761fd391414459ca1d0736f1ef9f9eac1661549de2854e53d602.png" title=" Manuel clicks on  (completed)" width="1366"/>
+                <img src="b009739e06fa761fd391414459ca1d0736f1ef9f9eac1661549de2854e53d602.png" title=" Manuel l lenar formulario (completed)" width="1366"/>
+                <img src="b009739e06fa761fd391414459ca1d0736f1ef9f9eac1661549de2854e53d602.png" title=" Manuel irvestidos" width="1366"/>
+                <img src="b009739e06fa761fd391414459ca1d0736f1ef9f9eac1661549de2854e53d602.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="c72ccd9874b02077d248241c503aaefbc417f6fc63511eb1eb8d4ff4e9014cd9.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="c72ccd9874b02077d248241c503aaefbc417f6fc63511eb1eb8d4ff4e9014cd9.png" title=" Manuel clicks on " width="1366"/>
+                <img src="ac8d6cee3fa4e803edf11220a3118c2d2117b0432f2fb051115540a0264ee499.png" title=" Manuel clicks on  (completed)" width="1366"/>
+                <img src="ac8d6cee3fa4e803edf11220a3118c2d2117b0432f2fb051115540a0264ee499.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="b760e1b5dfbab65b110d08c13506792b009702d7c059df23794bc16781009c7b.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="b760e1b5dfbab65b110d08c13506792b009702d7c059df23794bc16781009c7b.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="15cf152b154dfc671e166add1b8fb2d057b1dd1d69d81e70d1fc2a77f6269bfd.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="15cf152b154dfc671e166add1b8fb2d057b1dd1d69d81e70d1fc2a77f6269bfd.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="007f10b7b7b92662d4b5fbde2bea38e6e5425cea086e3141c0c75543edff22bd.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="007f10b7b7b92662d4b5fbde2bea38e6e5425cea086e3141c0c75543edff22bd.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="139c6e16d6e238c5ebf83bfb73e4567cc440c5e19072edfd41a781330dda9220.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="139c6e16d6e238c5ebf83bfb73e4567cc440c5e19072edfd41a781330dda9220.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="4104575a341085796b349f3418e5d6438b2e6a683757cf40675d0abeef7c29ec.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="4104575a341085796b349f3418e5d6438b2e6a683757cf40675d0abeef7c29ec.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="1d7feae3eb4381b6e0d9788bc3e20ddecb846ee27af355dad388e3e487e1e6fb.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="1d7feae3eb4381b6e0d9788bc3e20ddecb846ee27af355dad388e3e487e1e6fb.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="9b115871fc8183d8a31d20500330980ea63cec9f027923554a7514ca5f8e87d4.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="9b115871fc8183d8a31d20500330980ea63cec9f027923554a7514ca5f8e87d4.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="4f6370235016153671b6ac73477b395e12035acf0f9dadaea941d934d0ff5807.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="4f6370235016153671b6ac73477b395e12035acf0f9dadaea941d934d0ff5807.png" title=" Manuel clicks on boton lleva a pagina de registro" width="1366"/>
+                <img src="ffabb6bd79f707413e18725c6997db212b36e40231d5e593e0081f0d67160faf.png" title=" Manuel clicks on boton lleva a pagina de registro (completed)" width="1366"/>
+                <img src="ffabb6bd79f707413e18725c6997db212b36e40231d5e593e0081f0d67160faf.png" title=" Manuel irvestidos (completed)" width="1366"/>
+                <img src="ffabb6bd79f707413e18725c6997db212b36e40231d5e593e0081f0d67160faf.png" title=" When el usuario ingresa los datos requeridos por el sistema
+| strCorreo | strAlias | strTelefono1 | strTelefono2 | strOther | strCountry | strEstado | strCodigoPostal | strCity | strNombre | strApelllido | strContrasena | strDia | strMes | strAno | strEmpresa | strDireccion1 | strDireccion2 |
+| a88Rf0KXns2@gmail.com | alias RICK | 3235308332 | 3104197185 | no hay onfo | United States | Alaska | 23001 | Monteria | ricard | narvaez | ricardo | 25 | octubre | 1996 | agrosol | calle 45# 56-78 | calle 67# 67-89 | (completed)" width="1366"/>
+                <img src="ffabb6bd79f707413e18725c6997db212b36e40231d5e593e0081f0d67160faf.png" title=" Then el registro se completa al ver el nombre  ricrdo Narvaez: <span class='pending-color'>PENDING</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.2</span>
+</div>
+</body>
+</html>
